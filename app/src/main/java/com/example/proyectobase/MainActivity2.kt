@@ -19,11 +19,17 @@ class MainActivity2 : AppCompatActivity() {
 
 
         val btnCalculadora: Button = findViewById(R.id.btn_abrir_calculadora)
+        val btnConvertidor: Button = findViewById(R.id.btn_abrir_convetidor)
 
         btnCalculadora.setOnClickListener{
             val abrirCalculadora = Intent(this, MainActivity4::class.java)
             startActivity(abrirCalculadora)
 
+        }
+
+        btnConvertidor.setOnClickListener{
+            val abrirConvertidor = Intent(this,MainActivity5::class.java)
+            startActivity(abrirConvertidor)
         }
 
 
