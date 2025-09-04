@@ -61,7 +61,14 @@ class MainActivity4 : AppCompatActivity() {
             }else if(str_op_selected == "Restar"){
                 val resultado = OpMatematicas.restar(numeroUnoConv, numeroDosConv)
                 txResultado.text = resultado.toString()+" op: " +str_op_selected.toString()
+            }else if(str_op_selected == "Multiplicar"){
+                var resultado = OpMatematicas.multiplicar(numeroUnoConv, numeroDosConv)
+                txResultado.text = resultado.toString()+" op: "+str_op_selected.toString()
+            }else if(str_op_selected == "Dividir"){
+                var resultado = OpMatematicas.dividir(numeroUnoConv, numeroDosConv)
+                txResultado.text = resultado.toString()+" op: "+ str_op_selected.toString()
             }
+
 
 
 

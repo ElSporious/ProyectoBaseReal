@@ -14,6 +14,13 @@ object OpMatematicas {
     }
 
     fun dividir(valor1: Int, valor2 : Int): Int {
-        return valor1 / valor2
+        try {
+            return valor1 / valor2
+        }catch (e: ArithmeticException){
+            return 0
+        }finally {
+            println("SE HA CONTROLADO LA EXCEPCIÓN")
+        }
+
     }
 }
