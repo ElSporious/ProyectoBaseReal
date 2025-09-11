@@ -11,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
+import com.example.proyectobase.regex.Regex
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,32 +36,40 @@ class MainActivity : AppCompatActivity() {
         var usuarioBase = "be.ojedae@duocuc.cl"
         var passwBase = "admin123"
 
+        val emailRegex ="@".toRegex()
+
         btnLogin.setOnClickListener {
 
-            if(edUsername.text.toString() == usuarioBase
-                && edPasswd.text.toString() == passwBase){
-
-                // creo un objeto intent
-                val nuevaVentana = Intent(this, MainActivity2::class.java)
-                /**
-                 * creo una variable, llamo al metodo putExtra(nombre_put, valor_variable)
-                 *
-                 */
-
-                var ses_username = edUsername.text.toString()
-
-                nuevaVentana.putExtra("sesion",ses_username )
-                nuevaVentana.putExtra("par_contrasena", edPasswd.text.toString() )                //abrimos el activity
-                startActivity(nuevaVentana)
-
-                val toast = Toast.makeText(this, "Bienvenid@s: "+ses_username, Toast.LENGTH_SHORT) // in Activity
-                toast.show()
-                txMensaje.text = "login OK"
-
-
-            }else{
-                txMensaje.text = "login NO"
+            if (Regex.isValid(edUsername.text.toString())) {
+                txMensaje.text = "Email valido"
+            } else {
+                txMensaje.text = "Email invalido"
             }
+
+//            if(edUsername.text.toString() == usuarioBase
+//                && edPasswd.text.toString() == passwBase){
+//
+//                // creo un objeto intent
+//                val nuevaVentana = Intent(this, MainActivity2::class.java)
+//                /**
+//                 * creo una variable, llamo al metodo putExtra(nombre_put, valor_variable)
+//                 *
+//                 */
+//
+//                var ses_username = edUsername.text.toString()
+//
+//                nuevaVentana.putExtra("sesion",ses_username )
+//                nuevaVentana.putExtra("par_contrasena", edPasswd.text.toString() )                //abrimos el activity
+//                startActivity(nuevaVentana)
+//
+//                val toast = Toast.makeText(this, "Bienvenid@s: "+ses_username, Toast.LENGTH_SHORT) // in Activity
+//                toast.show()
+//                txMensaje.text = "login OK"
+//
+//
+//            }else{
+//                txMensaje.text = "login NO"
+//            }
 
         }
 
