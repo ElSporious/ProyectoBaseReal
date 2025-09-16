@@ -3,6 +3,7 @@ package com.example.proyectobase
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ListView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -20,6 +21,7 @@ class MainActivity2 : AppCompatActivity() {
 
         val btnCalculadora: Button = findViewById(R.id.btn_abrir_calculadora)
         val btnConvertidor: Button = findViewById(R.id.btn_abrir_convetidor)
+        val btnListView: Button = findViewById(R.id.btn_abrir_list_view)
 
         btnCalculadora.setOnClickListener{
             val abrirCalculadora = Intent(this, MainActivity4::class.java)
@@ -30,6 +32,11 @@ class MainActivity2 : AppCompatActivity() {
         btnConvertidor.setOnClickListener{
             val abrirConvertidor = Intent(this,MainActivity5::class.java)
             startActivity(abrirConvertidor)
+        }
+
+        btnListView.setOnClickListener{
+            val abrirListView = Intent(this,MainActivity6::class.java)
+            startActivity(abrirListView)
         }
 
 
