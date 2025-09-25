@@ -20,17 +20,6 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_abrir_calculadora"
         app:layout_constraintVertical_bias="0.5" />
 
-    <ListView
-        android:id="@+id/ls_mensajes"
-        android:layout_width="409dp"
-        android:layout_height="361dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_abrir_calculadora"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
-
     <Button
         android:id="@+id/btn_abrir_calculadora"
         android:layout_width="wrap_content"
@@ -39,20 +28,18 @@
         app:layout_constraintBottom_toTopOf="@+id/tx_bienvenido"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ls_mensajes"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_abrir_convetidor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Convertidor"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_abrir_calculadora"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tx_bienvenido"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5" />
 
     <Button
@@ -62,8 +49,20 @@
         android:text="List View"
         app:layout_constraintBottom_toTopOf="@+id/tx_bienvenido"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_abrir_calculadora"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_regiones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Regiones"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tx_bienvenido"
         app:layout_constraintVertical_bias="0.5" />
 </androidx.constraintlayout.widget.ConstraintLayout>
